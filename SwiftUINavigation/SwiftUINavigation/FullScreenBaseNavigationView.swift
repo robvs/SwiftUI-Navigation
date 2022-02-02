@@ -42,7 +42,6 @@ struct FullScreenBaseNavigationView: View {
             }
             .navigationTitle("Navigation \(selection ?? "")")
         }
-        .background(content: {Color.green})
     }
 }
 
