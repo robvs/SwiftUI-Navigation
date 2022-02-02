@@ -9,12 +9,21 @@ import SwiftUI
 
 struct RootView: View {
 
-    var body: some View {
-        ZStack {
-            MainTabbedView()
+    @StateObject var navigationController = NavigationController()
 
-            FullScreenBaseNavigationView()
+    var body: some View {
+        Group {
+            switch navigationController.visibleRootView {
+            case .mainTabbedView:
+                MainTabbedView(navigationController: navigationController)
+
+            case .baseNavigationView:
+                FullScreenBaseNavigationView(navigationController: navigationController)
+            }
         }
+        .animation(.default, value: navigationController.visibleRootView)
+        .transition(AnyTransition.asymmetric(insertion: .move(edge: .leading),
+                                             removal: .move(edge: .trailing)))
     }
 }
 

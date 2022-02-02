@@ -16,6 +16,7 @@
 		7F1B25D427AAE17B00B14985 /* SwiftUINavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25D327AAE17B00B14985 /* SwiftUINavigationUITestsLaunchTests.swift */; };
 		7F1B25E127AAFBE700B14985 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E027AAFBE700B14985 /* MainTabbedView.swift */; };
 		7F1B25E327AAFE4D00B14985 /* FullScreenBaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E227AAFE4D00B14985 /* FullScreenBaseNavigationView.swift */; };
+		7F1B25E527AB04BA00B14985 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E427AB04BA00B14985 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		7F1B25D327AAE17B00B14985 /* SwiftUINavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7F1B25E027AAFBE700B14985 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
 		7F1B25E227AAFE4D00B14985 /* FullScreenBaseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenBaseNavigationView.swift; sourceTree = "<group>"; };
+		7F1B25E427AB04BA00B14985 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				7F1B25E227AAFE4D00B14985 /* FullScreenBaseNavigationView.swift */,
 				7F1B25E027AAFBE700B14985 /* MainTabbedView.swift */,
+				7F1B25E427AB04BA00B14985 /* NavigationController.swift */,
 				7F1B25B827AAE17800B14985 /* RootView.swift */,
 				7F1B25B627AAE17800B14985 /* SwiftUINavigationApp.swift */,
 				7F1B25BA27AAE17B00B14985 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 			files = (
 				7F1B25B927AAE17800B14985 /* RootView.swift in Sources */,
 				7F1B25B727AAE17800B14985 /* SwiftUINavigationApp.swift in Sources */,
+				7F1B25E527AB04BA00B14985 /* NavigationController.swift in Sources */,
 				7F1B25E327AAFE4D00B14985 /* FullScreenBaseNavigationView.swift in Sources */,
 				7F1B25E127AAFBE700B14985 /* MainTabbedView.swift in Sources */,
 			);
