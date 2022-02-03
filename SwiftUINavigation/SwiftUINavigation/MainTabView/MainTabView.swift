@@ -9,7 +9,15 @@ import SwiftUI
 
 struct MainTabView: View {
 
-    @StateObject var viewModel: MainTabViewModel = MainTabViewModel()
+    private (set) var selectedTabItem: MainTabItem
+    private var viewModel: MainTabViewModel
+
+    init(selectedTabItem: MainTabItem,
+         tabChangeAction: @escaping MainTabViewChangeAction) {
+        
+        self.selectedTabItem = selectedTabItem
+        viewModel = MainTabViewModel(tabChangeAction: tabChangeAction)
+    }
 
     var body: some View {
         VStack(spacing: 0.0) {
@@ -26,6 +34,8 @@ struct MainTabView: View {
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView()
+        MainTabView(selectedTabItem: .first) { newTabItem in
+            print("Tab item changed to \(newTabItem.label)")
+        }
     }
 }
