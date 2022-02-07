@@ -5,37 +5,27 @@
 //  Created by Rob Vander Sloot on 2/3/22.
 //
 
+import Combine
 import SwiftUI
 
 struct MainTabView: View {
 
-    private (set) var selectedTabItem: MainTabItem
-    private var viewModel: MainTabViewModel
-
-    init(selectedTabItem: MainTabItem,
-         tabChangeAction: @escaping MainTabViewChangeAction) {
-        
-        self.selectedTabItem = selectedTabItem
-        viewModel = MainTabViewModel(tabChangeAction: tabChangeAction)
-    }
+    @Binding var selectedTabItem: MainTabItem
 
     var body: some View {
         VStack(spacing: 0.0) {
             Spacer()
             Divider()
             HStack(spacing: 0.0) {
-                MainTabItemButton<MainTabViewModel>(tabItem: .first)
-                MainTabItemButton<MainTabViewModel>(tabItem: .second)
+                MainTabItemButton(tabItem: .first, selectedTabItem: $selectedTabItem)
+                MainTabItemButton(tabItem: .second, selectedTabItem: $selectedTabItem)
             }
-            .environmentObject(viewModel)
         }
     }
 }
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView(selectedTabItem: .first) { newTabItem in
-            print("Tab item changed to \(newTabItem.label)")
-        }
+        MainTabView(selectedTabItem: .constant(.first))
     }
 }

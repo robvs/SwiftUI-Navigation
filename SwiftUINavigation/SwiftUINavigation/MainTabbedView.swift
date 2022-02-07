@@ -11,23 +11,26 @@ struct MainTabbedView: View {
 
     let navigationController: NavigationController
 
-    @State private var tabSelection: Int = 1
+    @State private var selectedTabItem: MainTabItem = .first
 
     var body: some View {
-        TabView(selection: $tabSelection) {
+        VStack {
+            Group {
+                switch selectedTabItem {
+                case .first:
+                    VStack {
+                        Text("This is tab \(selectedTabItem.label)")
+                        Button("Show Full Screen Nav View") {
+                            navigationController.navigate(to: .baseNavigationView)
+                        }
+                    }
 
-            VStack {
-                Text("This is tab \(tabSelection)")
-                Button("Show Full Screen Nav View") {
-                    navigationController.navigate(to: .baseNavigationView)
+                case .second:
+                    Text("This is tab \(selectedTabItem.label)")
                 }
             }
-            .tabItem { Text("tab 1") }
-            .tag(1)
 
-            Text("This is tab \(tabSelection)")
-                .tabItem { Text("tab 2") }
-                .tag(2)
+            MainTabView(selectedTabItem: $selectedTabItem)
         }
     }
 }

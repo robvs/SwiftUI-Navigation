@@ -7,16 +7,17 @@
 
 import Foundation
 
-enum RootViewDesignation {
+enum RootViewId {
     case mainTabbedView
     case baseNavigationView
 }
 
 final class NavigationController: ObservableObject {
 
-    @Published private (set) var visibleRootView: RootViewDesignation = .mainTabbedView
+    @Published private (set) var visibleRootView: RootViewId = .mainTabbedView
 
-    func navigate(to view: RootViewDesignation) {
-        visibleRootView = view
+    func navigate(to viewId: RootViewId) {
+        visibleRootView = viewId
+        print("Root view changed to \(viewId)")
     }
 }

@@ -26,18 +26,13 @@ protocol MainTabItemButtonHandling: ObservableObject {
 // MARK: View definition
 
 /// Individual tab button that displays an icon and label.
-struct MainTabItemButton<Handler: MainTabItemButtonHandling>: View {
+struct MainTabItemButton: View {
 
-    @EnvironmentObject var handler: Handler
-
-    private let tabItem: MainTabItem
-
-    init(tabItem: MainTabItem) {
-        self.tabItem = tabItem
-    }
+    let tabItem: MainTabItem
+    @Binding var selectedTabItem: MainTabItem
 
     var body: some View {
-        Button(action: { handler.mainTabItemButtonItemWasSelected(tabItem) },
+        Button(action: { selectedTabItem = tabItem },
                label: { buttonView() })
             .buttonStyle(MainTabItemButtonStyle())
     }
@@ -54,7 +49,7 @@ struct MainTabItemButton<Handler: MainTabItemButtonHandling>: View {
                     .font(.system(size: 10))
                     .lineLimit(1)
             }
-            .foregroundColor(handler.selectedTabItem == tabItem ? tabItem.accentColor : .gray)
+            .foregroundColor(selectedTabItem == tabItem ? tabItem.accentColor : .gray)
         }
     }
 
@@ -74,8 +69,8 @@ struct MainTabItemButton_Previews: PreviewProvider {
     static var previews: some View {
         let buttonHandler = FakeMainTabItemButtonHandler()
         HStack(spacing: 0.0) {
-            MainTabItemButton<FakeMainTabItemButtonHandler>(tabItem: .first)
-            MainTabItemButton<FakeMainTabItemButtonHandler>(tabItem: .second)
+            MainTabItemButton(tabItem: .first, selectedTabItem: .constant(.first))
+            MainTabItemButton(tabItem: .second, selectedTabItem: .constant(.first))
         }
         .environmentObject(buttonHandler)
     }

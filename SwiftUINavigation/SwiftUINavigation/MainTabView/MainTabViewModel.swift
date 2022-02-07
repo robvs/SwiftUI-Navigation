@@ -25,7 +25,7 @@ final class MainTabViewModel: MainTabItemButtonHandling {
         guard tabItem != selectedTabItem else {
             return
         }
-        
+
         selectedTabItem = tabItem
         tabChangeAction(tabItem)
     }
