@@ -16,16 +16,17 @@ struct RootView: View {
             Group {
                 switch navigationController.visibleRootView {
                 case .mainTabbedView:
-                    MainTabbedView(navigationController: navigationController)
+                    MainTabbedView()
 
                 case .baseNavigationView:
-                    FullScreenBaseNavigationView(navigationController: navigationController)
+                    FullScreenBaseNavigationView()
                 }
             }
             .animation(.default, value: navigationController.visibleRootView)
-            .transition(AnyTransition.asymmetric(insertion: .move(edge: .trailing),
-                                                 removal: .move(edge: .leading)))
+            .transition(AnyTransition.asymmetric(insertion: .move(edge: navigationController.transitionInsertionEdge),
+                                                 removal: .move(edge: navigationController.transitionRemovalEdge)))
         }
+        .environmentObject(navigationController)
     }
 }
 

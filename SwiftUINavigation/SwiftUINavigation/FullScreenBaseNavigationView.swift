@@ -9,8 +9,7 @@ import SwiftUI
 
 struct FullScreenBaseNavigationView: View {
 
-    let navigationController: NavigationController
-
+    @EnvironmentObject var navigationController: NavigationController
     @State private var selection: String? = nil
 
     var body: some View {
@@ -47,6 +46,8 @@ struct FullScreenBaseNavigationView: View {
 
 struct FullScreenBaseNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        FullScreenBaseNavigationView(navigationController: NavigationController())
+        let navigationController = NavigationController()
+        FullScreenBaseNavigationView()
+            .environmentObject(navigationController)
     }
 }

@@ -9,8 +9,7 @@ import SwiftUI
 
 struct MainTabbedView: View {
 
-    let navigationController: NavigationController
-
+    @EnvironmentObject var navigationController: NavigationController
     @State private var selectedTabItem: MainTabItem = .first
 
     var body: some View {
@@ -37,6 +36,8 @@ struct MainTabbedView: View {
 
 struct MainTabbedView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabbedView(navigationController: NavigationController())
+        let navigationController = NavigationController()
+        MainTabbedView()
+            .environmentObject(navigationController)
     }
 }
