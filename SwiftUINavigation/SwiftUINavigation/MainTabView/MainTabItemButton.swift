@@ -41,7 +41,7 @@ struct MainTabItemButton: View {
         ZStack {
             Rectangle()
                 .fill(Color(.systemBackground))
-                .frame(height: 60.0)
+                .frame(height: AppDimension.tabViewHeight)
             VStack {
                 Image(systemName: tabItem.imageName)
                     .font(Font.system(.title3))

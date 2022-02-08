@@ -16,6 +16,7 @@ final class NavigationController: ObservableObject {
 
     /// Id of the current root view.
     @Published private (set) var visibleRootView: RootViewId
+    @Published var selectedTabItem: MainTabItem
 
     /// Edge indicators that are used to indicate the direction of transition when the root view changes.
     private (set) var transitionRemovalEdge: Edge = .trailing
@@ -25,8 +26,11 @@ final class NavigationController: ObservableObject {
         }
     }
 
-    init(initialRootView: RootViewId = .mainTabbedView) {
+    init(initialRootView: RootViewId = .mainTabbedView,
+         initialTab: MainTabItem = .second) {
+
         visibleRootView = initialRootView
+        selectedTabItem = initialTab
     }
 
     /// Navigate to the given view.

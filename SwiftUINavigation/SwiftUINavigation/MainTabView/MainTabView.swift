@@ -14,7 +14,6 @@ struct MainTabView: View {
 
     var body: some View {
         VStack(spacing: 0.0) {
-            Spacer()
             Divider()
             HStack(spacing: 0.0) {
                 MainTabItemButton(tabItem: .first, selectedTabItem: $selectedTabItem)

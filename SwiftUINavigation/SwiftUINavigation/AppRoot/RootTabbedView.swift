@@ -10,26 +10,35 @@ import SwiftUI
 struct RootTabbedView: View {
 
     @EnvironmentObject var navigationController: NavigationController
-    @State private var selectedTabItem: MainTabItem = .first
 
     var body: some View {
-        VStack {
+        ZStack {
             Group {
-                switch selectedTabItem {
+                switch navigationController.selectedTabItem {
                 case .first:
                     VStack {
-                        Text("This is tab \(selectedTabItem.label)")
+                        Text("This is tab \(navigationController.selectedTabItem.label)")
+                            .fontWeight(.bold)
+                            .padding()
+
                         Button("Show Root Nav View") {
                             navigationController.navigate(to: .baseNavigationView)
                         }
                     }
 
                 case .second:
-                    Text("This is tab \(selectedTabItem.label)")
+                    NavigationView {
+                        NavigationMasterListView()
+                    }
                 }
             }
+            // add bottom padding so that the bottom of the view will scroll above the tab view
+            .padding(.bottom, AppDimension.tabViewHeight)
 
-            MainTabView(selectedTabItem: $selectedTabItem)
+            VStack {
+                Spacer()
+                MainTabView(selectedTabItem: $navigationController.selectedTabItem)
+            }
         }
     }
 }

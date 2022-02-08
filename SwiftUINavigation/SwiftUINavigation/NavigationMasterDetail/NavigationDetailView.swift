@@ -22,6 +22,7 @@ struct NavigationDetailView: View {
         .padding()
         .overlay(ActivitySpinner(isShowing: viewModel.showingSpinner))
         .onAppear { viewModel.load() }
+        .navigationTitle("Navigation Detail: \(viewModel.name ?? "")")
     }
 }
 

@@ -26,6 +26,7 @@
 		7F1B25F627B2CD6000B14985 /* NavigationMasterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25F527B2CD5F00B14985 /* NavigationMasterListViewModel.swift */; };
 		7F1B25F827B2D0EA00B14985 /* NavigationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25F727B2D0EA00B14985 /* NavigationDetailViewModel.swift */; };
 		7F1B25FB27B2D5E900B14985 /* ActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25FA27B2D5E900B14985 /* ActivitySpinner.swift */; };
+		7FE117C127B30D1100F10416 /* AppDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE117C027B30D1100F10416 /* AppDimension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		7F1B25F527B2CD5F00B14985 /* NavigationMasterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMasterListViewModel.swift; sourceTree = "<group>"; };
 		7F1B25F727B2D0EA00B14985 /* NavigationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDetailViewModel.swift; sourceTree = "<group>"; };
 		7F1B25FA27B2D5E900B14985 /* ActivitySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySpinner.swift; sourceTree = "<group>"; };
+		7FE117C027B30D1100F10416 /* AppDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDimension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				7F1B25EF27B2BC6A00B14985 /* AppRoot */,
 				7F1B25E627AB21FD00B14985 /* MainTabView */,
 				7F1B25F427B2BFB500B14985 /* NavigationMasterDetail */,
+				7FE117BF27B30CF400F10416 /* Utility */,
 				7F1B25F927B2D59E00B14985 /* UtilityViews */,
 				7F1B25BA27AAE17B00B14985 /* Assets.xcassets */,
 				7F1B25BC27AAE17B00B14985 /* Preview Content */,
@@ -193,6 +196,14 @@
 				7F1B25FA27B2D5E900B14985 /* ActivitySpinner.swift */,
 			);
 			path = UtilityViews;
+			sourceTree = "<group>";
+		};
+		7FE117BF27B30CF400F10416 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				7FE117C027B30D1100F10416 /* AppDimension.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +341,7 @@
 				7F1B25F627B2CD6000B14985 /* NavigationMasterListViewModel.swift in Sources */,
 				7F1B25B927AAE17800B14985 /* RootView.swift in Sources */,
 				7F1B25FB27B2D5E900B14985 /* ActivitySpinner.swift in Sources */,
+				7FE117C127B30D1100F10416 /* AppDimension.swift in Sources */,
 				7F1B25B727AAE17800B14985 /* SwiftUINavigationApp.swift in Sources */,
 				7F1B25EC27AC333A00B14985 /* MainTabView.swift in Sources */,
 				7F1B25E527AB04BA00B14985 /* NavigationController.swift in Sources */,

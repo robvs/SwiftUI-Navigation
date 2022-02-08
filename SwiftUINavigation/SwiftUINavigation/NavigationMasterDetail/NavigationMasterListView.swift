@@ -15,8 +15,11 @@ struct NavigationMasterListView: View {
         List(viewModel.stuffList) { stuffItem in
             NavigationLink(destination: NavigationDetailView(viewModel: NavigationDetailViewModel(stuffId: stuffItem.id))) {
                 Text(stuffItem.name)
+                    .padding(.vertical)
             }
         }
+        .navigationTitle("Navigation Master List View")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
