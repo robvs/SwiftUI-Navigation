@@ -21,6 +21,11 @@
 		7F1B25EA27AB233E00B14985 /* MainTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E927AB233E00B14985 /* MainTabItem.swift */; };
 		7F1B25EC27AC333A00B14985 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25EB27AC333900B14985 /* MainTabView.swift */; };
 		7F1B25EE27AC33D200B14985 /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25ED27AC33D200B14985 /* MainTabViewModel.swift */; };
+		7F1B25F127B2BF6F00B14985 /* NavigationMasterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25F027B2BF6F00B14985 /* NavigationMasterListView.swift */; };
+		7F1B25F327B2BF9E00B14985 /* NavigationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25F227B2BF9D00B14985 /* NavigationDetailView.swift */; };
+		7F1B25F627B2CD6000B14985 /* NavigationMasterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25F527B2CD5F00B14985 /* NavigationMasterListViewModel.swift */; };
+		7F1B25F827B2D0EA00B14985 /* NavigationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25F727B2D0EA00B14985 /* NavigationDetailViewModel.swift */; };
+		7F1B25FB27B2D5E900B14985 /* ActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25FA27B2D5E900B14985 /* ActivitySpinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 		7F1B25E927AB233E00B14985 /* MainTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabItem.swift; sourceTree = "<group>"; };
 		7F1B25EB27AC333900B14985 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7F1B25ED27AC33D200B14985 /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
+		7F1B25F027B2BF6F00B14985 /* NavigationMasterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMasterListView.swift; sourceTree = "<group>"; };
+		7F1B25F227B2BF9D00B14985 /* NavigationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDetailView.swift; sourceTree = "<group>"; };
+		7F1B25F527B2CD5F00B14985 /* NavigationMasterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMasterListViewModel.swift; sourceTree = "<group>"; };
+		7F1B25F727B2D0EA00B14985 /* NavigationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDetailViewModel.swift; sourceTree = "<group>"; };
+		7F1B25FA27B2D5E900B14985 /* ActivitySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySpinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,8 @@
 				7F1B25EF27B2BC6A00B14985 /* AppRoot */,
 				7F1B25E627AB21FD00B14985 /* MainTabView */,
 				7F1B25E427AB04BA00B14985 /* NavigationController.swift */,
+				7F1B25F427B2BFB500B14985 /* NavigationMasterDetail */,
+				7F1B25F927B2D59E00B14985 /* UtilityViews */,
 				7F1B25BA27AAE17B00B14985 /* Assets.xcassets */,
 				7F1B25BC27AAE17B00B14985 /* Preview Content */,
 			);
@@ -162,6 +174,25 @@
 				7F1B25B627AAE17800B14985 /* SwiftUINavigationApp.swift */,
 			);
 			path = AppRoot;
+			sourceTree = "<group>";
+		};
+		7F1B25F427B2BFB500B14985 /* NavigationMasterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7F1B25F227B2BF9D00B14985 /* NavigationDetailView.swift */,
+				7F1B25F727B2D0EA00B14985 /* NavigationDetailViewModel.swift */,
+				7F1B25F027B2BF6F00B14985 /* NavigationMasterListView.swift */,
+				7F1B25F527B2CD5F00B14985 /* NavigationMasterListViewModel.swift */,
+			);
+			path = NavigationMasterDetail;
+			sourceTree = "<group>";
+		};
+		7F1B25F927B2D59E00B14985 /* UtilityViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F1B25FA27B2D5E900B14985 /* ActivitySpinner.swift */,
+			);
+			path = UtilityViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,14 +325,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F1B25F327B2BF9E00B14985 /* NavigationDetailView.swift in Sources */,
 				7F1B25E827AB229200B14985 /* MainTabItemButton.swift in Sources */,
+				7F1B25F627B2CD6000B14985 /* NavigationMasterListViewModel.swift in Sources */,
 				7F1B25B927AAE17800B14985 /* RootView.swift in Sources */,
+				7F1B25FB27B2D5E900B14985 /* ActivitySpinner.swift in Sources */,
 				7F1B25B727AAE17800B14985 /* SwiftUINavigationApp.swift in Sources */,
 				7F1B25EC27AC333A00B14985 /* MainTabView.swift in Sources */,
 				7F1B25E527AB04BA00B14985 /* NavigationController.swift in Sources */,
 				7F1B25E327AAFE4D00B14985 /* RootNavigationView.swift in Sources */,
 				7F1B25E127AAFBE700B14985 /* RootTabbedView.swift in Sources */,
+				7F1B25F827B2D0EA00B14985 /* NavigationDetailViewModel.swift in Sources */,
 				7F1B25EA27AB233E00B14985 /* MainTabItem.swift in Sources */,
+				7F1B25F127B2BF6F00B14985 /* NavigationMasterListView.swift in Sources */,
 				7F1B25EE27AC33D200B14985 /* MainTabViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

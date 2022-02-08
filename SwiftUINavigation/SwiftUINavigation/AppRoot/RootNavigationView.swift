@@ -33,7 +33,7 @@ struct RootNavigationView: View {
                     EmptyView()
                 }
 
-                NavigationLink(destination: Text("Second View"),
+                NavigationLink(destination: NavigationMasterListView(),
                                tag: "Second",
                                selection: $selection) {
                     EmptyView()

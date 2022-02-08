@@ -19,7 +19,7 @@ struct RootTabbedView: View {
                 case .first:
                     VStack {
                         Text("This is tab \(selectedTabItem.label)")
-                        Button("Show Full Screen Nav View") {
+                        Button("Show Root Nav View") {
                             navigationController.navigate(to: .baseNavigationView)
                         }
                     }
