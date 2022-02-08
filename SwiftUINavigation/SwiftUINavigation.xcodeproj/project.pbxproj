@@ -120,7 +120,6 @@
 			children = (
 				7F1B25EF27B2BC6A00B14985 /* AppRoot */,
 				7F1B25E627AB21FD00B14985 /* MainTabView */,
-				7F1B25E427AB04BA00B14985 /* NavigationController.swift */,
 				7F1B25F427B2BFB500B14985 /* NavigationMasterDetail */,
 				7F1B25F927B2D59E00B14985 /* UtilityViews */,
 				7F1B25BA27AAE17B00B14985 /* Assets.xcassets */,
@@ -168,6 +167,7 @@
 		7F1B25EF27B2BC6A00B14985 /* AppRoot */ = {
 			isa = PBXGroup;
 			children = (
+				7F1B25E427AB04BA00B14985 /* NavigationController.swift */,
 				7F1B25E227AAFE4D00B14985 /* RootNavigationView.swift */,
 				7F1B25E027AAFBE700B14985 /* RootTabbedView.swift */,
 				7F1B25B827AAE17800B14985 /* RootView.swift */,

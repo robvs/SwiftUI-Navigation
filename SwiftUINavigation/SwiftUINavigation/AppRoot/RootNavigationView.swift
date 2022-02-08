@@ -14,32 +14,41 @@ struct RootNavigationView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 8.0) {
                 Text("Root navigation view")
                     .fontWeight(.bold)
                     .padding()
 
-                Button("Show First View")  { self.selection = "First" }
-                    .padding(.bottom)
-
-                Button("Show Second View") { self.selection = "Second" }
-                    .padding(.bottom)
+                firstViewNavigationButton
+                masterDetailNavigationButton
 
                 Button("Show Tabbed View") { navigationController.navigate(to: .mainTabbedView) }
-
-                NavigationLink(destination: Text("First View"),
-                               tag: "First",
-                               selection: $selection) {
-                    EmptyView()
-                }
-
-                NavigationLink(destination: NavigationMasterListView(),
-                               tag: "Second",
-                               selection: $selection) {
-                    EmptyView()
-                }
             }
             .navigationTitle("Navigation \(selection ?? "")")
+        }
+    }
+
+    var firstViewNavigationButton: some View {
+        Group {
+            Button("Show First View")  { selection = "First" }
+
+            NavigationLink(destination: Text("First View"),
+                           tag: "First",
+                           selection: $selection) {
+                EmptyView()
+            }
+        }
+    }
+
+    var masterDetailNavigationButton: some View {
+        Group {
+            Button("Show Master/Detail View") { selection = "Second" }
+
+            NavigationLink(destination: NavigationMasterListView(),
+                           tag: "Second",
+                           selection: $selection) {
+                EmptyView()
+            }
         }
     }
 }
