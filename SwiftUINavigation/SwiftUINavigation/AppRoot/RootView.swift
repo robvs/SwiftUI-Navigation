@@ -9,19 +9,20 @@ import SwiftUI
 
 struct RootView: View {
 
-    @StateObject var navigationController = NavigationController()
+    @StateObject var navigationController = NavigationController(initialRootView: .baseNavigationView)
 
     var body: some View {
         ZStack {
             Group {
                 switch navigationController.visibleRootView {
                 case .mainTabbedView:
-                    MainTabbedView()
+                    RootTabbedView()
 
                 case .baseNavigationView:
-                    FullScreenBaseNavigationView()
+                    RootNavigationView()
                 }
             }
+            // perform left/right slide transitions when moving between root views
             .animation(.default, value: navigationController.visibleRootView)
             .transition(AnyTransition.asymmetric(insertion: .move(edge: navigationController.transitionInsertionEdge),
                                                  removal: .move(edge: navigationController.transitionRemovalEdge)))

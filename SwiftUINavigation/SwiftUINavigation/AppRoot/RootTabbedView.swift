@@ -1,5 +1,5 @@
 //
-//  MainTabbedView.swift
+//  RootTabbedView.swift
 //  SwiftUINavigation
 //
 //  Created by Rob Vander Sloot on 2/2/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainTabbedView: View {
+struct RootTabbedView: View {
 
     @EnvironmentObject var navigationController: NavigationController
     @State private var selectedTabItem: MainTabItem = .first
@@ -37,7 +37,7 @@ struct MainTabbedView: View {
 struct MainTabbedView_Previews: PreviewProvider {
     static var previews: some View {
         let navigationController = NavigationController()
-        MainTabbedView()
+        RootTabbedView()
             .environmentObject(navigationController)
     }
 }

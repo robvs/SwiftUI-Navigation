@@ -1,5 +1,5 @@
 //
-//  FullScreenBaseNavigationView.swift
+//  RootNavigationView.swift
 //  SwiftUINavigation
 //
 //  Created by Rob Vander Sloot on 2/2/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FullScreenBaseNavigationView: View {
+struct RootNavigationView: View {
 
     @EnvironmentObject var navigationController: NavigationController
     @State private var selection: String? = nil
@@ -15,8 +15,8 @@ struct FullScreenBaseNavigationView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Full screen base navigation view")
-                    .foregroundColor(.purple)
+                Text("Root navigation view")
+                    .fontWeight(.bold)
                     .padding()
 
                 Button("Show First View")  { self.selection = "First" }
@@ -47,7 +47,7 @@ struct FullScreenBaseNavigationView: View {
 struct FullScreenBaseNavigationView_Previews: PreviewProvider {
     static var previews: some View {
         let navigationController = NavigationController()
-        FullScreenBaseNavigationView()
+        RootNavigationView()
             .environmentObject(navigationController)
     }
 }

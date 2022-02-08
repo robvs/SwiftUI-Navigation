@@ -14,8 +14,8 @@
 		7F1B25C827AAE17B00B14985 /* SwiftUINavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25C727AAE17B00B14985 /* SwiftUINavigationTests.swift */; };
 		7F1B25D227AAE17B00B14985 /* SwiftUINavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25D127AAE17B00B14985 /* SwiftUINavigationUITests.swift */; };
 		7F1B25D427AAE17B00B14985 /* SwiftUINavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25D327AAE17B00B14985 /* SwiftUINavigationUITestsLaunchTests.swift */; };
-		7F1B25E127AAFBE700B14985 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E027AAFBE700B14985 /* MainTabbedView.swift */; };
-		7F1B25E327AAFE4D00B14985 /* FullScreenBaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E227AAFE4D00B14985 /* FullScreenBaseNavigationView.swift */; };
+		7F1B25E127AAFBE700B14985 /* RootTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E027AAFBE700B14985 /* RootTabbedView.swift */; };
+		7F1B25E327AAFE4D00B14985 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E227AAFE4D00B14985 /* RootNavigationView.swift */; };
 		7F1B25E527AB04BA00B14985 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E427AB04BA00B14985 /* NavigationController.swift */; };
 		7F1B25E827AB229200B14985 /* MainTabItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E727AB229200B14985 /* MainTabItemButton.swift */; };
 		7F1B25EA27AB233E00B14985 /* MainTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25E927AB233E00B14985 /* MainTabItem.swift */; };
@@ -51,8 +51,8 @@
 		7F1B25CD27AAE17B00B14985 /* SwiftUINavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUINavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1B25D127AAE17B00B14985 /* SwiftUINavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavigationUITests.swift; sourceTree = "<group>"; };
 		7F1B25D327AAE17B00B14985 /* SwiftUINavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7F1B25E027AAFBE700B14985 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
-		7F1B25E227AAFE4D00B14985 /* FullScreenBaseNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenBaseNavigationView.swift; sourceTree = "<group>"; };
+		7F1B25E027AAFBE700B14985 /* RootTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabbedView.swift; sourceTree = "<group>"; };
+		7F1B25E227AAFE4D00B14985 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
 		7F1B25E427AB04BA00B14985 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		7F1B25E727AB229200B14985 /* MainTabItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabItemButton.swift; sourceTree = "<group>"; };
 		7F1B25E927AB233E00B14985 /* MainTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabItem.swift; sourceTree = "<group>"; };
@@ -108,12 +108,9 @@
 		7F1B25B527AAE17800B14985 /* SwiftUINavigation */ = {
 			isa = PBXGroup;
 			children = (
-				7F1B25E227AAFE4D00B14985 /* FullScreenBaseNavigationView.swift */,
-				7F1B25E027AAFBE700B14985 /* MainTabbedView.swift */,
+				7F1B25EF27B2BC6A00B14985 /* AppRoot */,
 				7F1B25E627AB21FD00B14985 /* MainTabView */,
 				7F1B25E427AB04BA00B14985 /* NavigationController.swift */,
-				7F1B25B827AAE17800B14985 /* RootView.swift */,
-				7F1B25B627AAE17800B14985 /* SwiftUINavigationApp.swift */,
 				7F1B25BA27AAE17B00B14985 /* Assets.xcassets */,
 				7F1B25BC27AAE17B00B14985 /* Preview Content */,
 			);
@@ -154,6 +151,17 @@
 				7F1B25ED27AC33D200B14985 /* MainTabViewModel.swift */,
 			);
 			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		7F1B25EF27B2BC6A00B14985 /* AppRoot */ = {
+			isa = PBXGroup;
+			children = (
+				7F1B25E227AAFE4D00B14985 /* RootNavigationView.swift */,
+				7F1B25E027AAFBE700B14985 /* RootTabbedView.swift */,
+				7F1B25B827AAE17800B14985 /* RootView.swift */,
+				7F1B25B627AAE17800B14985 /* SwiftUINavigationApp.swift */,
+			);
+			path = AppRoot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +299,8 @@
 				7F1B25B727AAE17800B14985 /* SwiftUINavigationApp.swift in Sources */,
 				7F1B25EC27AC333A00B14985 /* MainTabView.swift in Sources */,
 				7F1B25E527AB04BA00B14985 /* NavigationController.swift in Sources */,
-				7F1B25E327AAFE4D00B14985 /* FullScreenBaseNavigationView.swift in Sources */,
-				7F1B25E127AAFBE700B14985 /* MainTabbedView.swift in Sources */,
+				7F1B25E327AAFE4D00B14985 /* RootNavigationView.swift in Sources */,
+				7F1B25E127AAFBE700B14985 /* RootTabbedView.swift in Sources */,
 				7F1B25EA27AB233E00B14985 /* MainTabItem.swift in Sources */,
 				7F1B25EE27AC33D200B14985 /* MainTabViewModel.swift in Sources */,
 			);
