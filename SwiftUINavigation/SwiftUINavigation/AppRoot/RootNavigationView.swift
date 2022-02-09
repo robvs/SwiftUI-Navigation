@@ -21,9 +21,7 @@ struct RootNavigationView: View {
                 firstViewNavigationButton
                 masterDetailNavigationButton
 
-                Button("Show Last Tabbed View") { navigationController.navigate(to: .mainTabbedView) }
-                Button("Show First Tabbed View") { navigationController.navigate(to: .first) }
-                Button("Show Second Tabbed View") { navigationController.navigate(to: .second) }
+                Button("Show Deep Link View")  { navigationController.navigate(to: .deepLinkView) }
             }
             .navigationTitle("Root Navigation View")
         }

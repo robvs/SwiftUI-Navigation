@@ -44,8 +44,8 @@ struct RootTabbedView: View {
                 navigationController.navigate(to: .baseNavigationView)
             }
 
-            Button("Show First Nav View") {
-                navigationController.navigate(to: .firstNavSubview)
+            Button("Show Deep Link View")  {
+                navigationController.navigate(to: .deepLinkView)
             }
         }
     }

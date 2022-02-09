@@ -20,6 +20,9 @@ struct RootView: View {
 
                 case .baseNavigationView:
                     RootNavigationView()
+
+                case .deepLinkView:
+                    DeepLinksView()
                 }
             }
             // perform left/right slide transitions when moving between root views

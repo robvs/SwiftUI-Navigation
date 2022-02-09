@@ -10,6 +10,7 @@ import SwiftUI
 enum RootViewId {
     case mainTabbedView
     case baseNavigationView
+    case deepLinkView
 }
 
 enum RootNavigationSelection {

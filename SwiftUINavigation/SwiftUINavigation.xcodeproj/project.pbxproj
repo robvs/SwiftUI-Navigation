@@ -26,6 +26,7 @@
 		7F1B25F827B2D0EA00B14985 /* NavigationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25F727B2D0EA00B14985 /* NavigationDetailViewModel.swift */; };
 		7F1B25FB27B2D5E900B14985 /* ActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B25FA27B2D5E900B14985 /* ActivitySpinner.swift */; };
 		7FE117C127B30D1100F10416 /* AppDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE117C027B30D1100F10416 /* AppDimension.swift */; };
+		7FE117C327B431F300F10416 /* DeepLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE117C227B431F300F10416 /* DeepLinksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		7F1B25F727B2D0EA00B14985 /* NavigationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDetailViewModel.swift; sourceTree = "<group>"; };
 		7F1B25FA27B2D5E900B14985 /* ActivitySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySpinner.swift; sourceTree = "<group>"; };
 		7FE117C027B30D1100F10416 /* AppDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDimension.swift; sourceTree = "<group>"; };
+		7FE117C227B431F300F10416 /* DeepLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		7F1B25EF27B2BC6A00B14985 /* AppRoot */ = {
 			isa = PBXGroup;
 			children = (
+				7FE117C227B431F300F10416 /* DeepLinksView.swift */,
 				7F1B25E427AB04BA00B14985 /* NavigationController.swift */,
 				7F1B25E227AAFE4D00B14985 /* RootNavigationView.swift */,
 				7F1B25E027AAFBE700B14985 /* RootTabbedView.swift */,
@@ -346,6 +349,7 @@
 				7F1B25E127AAFBE700B14985 /* RootTabbedView.swift in Sources */,
 				7F1B25F827B2D0EA00B14985 /* NavigationDetailViewModel.swift in Sources */,
 				7F1B25EA27AB233E00B14985 /* MainTabItem.swift in Sources */,
+				7FE117C327B431F300F10416 /* DeepLinksView.swift in Sources */,
 				7F1B25F127B2BF6F00B14985 /* NavigationMasterListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
