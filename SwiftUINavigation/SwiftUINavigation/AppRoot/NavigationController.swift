@@ -15,7 +15,7 @@ enum RootViewId {
 final class NavigationController: ObservableObject {
 
     /// Id of the current root view.
-    @Published private (set) var visibleRootView: RootViewId
+    @Published private (set) var presentedRootView: RootViewId
     @Published var selectedTabItem: MainTabItem
 
     /// Edge indicators that are used to indicate the direction of transition when the root view changes.
@@ -29,7 +29,7 @@ final class NavigationController: ObservableObject {
     init(initialRootView: RootViewId = .mainTabbedView,
          initialTab: MainTabItem = .second) {
 
-        visibleRootView = initialRootView
+        presentedRootView = initialRootView
         selectedTabItem = initialTab
     }
 
@@ -39,7 +39,7 @@ final class NavigationController: ObservableObject {
         // set the transition edges first to ensure that the root view slides in the correct direction
         transitionInsertionEdge = transitionRemovalEdge
         
-        visibleRootView = viewId
+        presentedRootView = viewId
         print("Root view changed to \(viewId)")
     }
 }

@@ -16,20 +16,10 @@ struct RootTabbedView: View {
             Group {
                 switch navigationController.selectedTabItem {
                 case .first:
-                    VStack {
-                        Text("This is tab \(navigationController.selectedTabItem.label)")
-                            .fontWeight(.bold)
-                            .padding()
-
-                        Button("Show Root Nav View") {
-                            navigationController.navigate(to: .baseNavigationView)
-                        }
-                    }
+                    firstTabView
 
                 case .second:
-                    NavigationView {
-                        NavigationMasterListView()
-                    }
+                    masterListView
                 }
             }
             // add bottom padding so that the bottom of the view will scroll above the tab view
@@ -39,6 +29,24 @@ struct RootTabbedView: View {
                 Spacer()
                 MainTabView(selectedTabItem: $navigationController.selectedTabItem)
             }
+        }
+    }
+
+    private var firstTabView: some View {
+        VStack {
+            Text("This is tab \(navigationController.selectedTabItem.label)")
+                .fontWeight(.bold)
+                .padding()
+
+            Button("Show Root Nav View") {
+                navigationController.navigate(to: .baseNavigationView)
+            }
+        }
+    }
+
+    private var masterListView: some View {
+        NavigationView {
+            NavigationMasterListView()
         }
     }
 }

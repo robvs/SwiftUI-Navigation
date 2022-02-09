@@ -14,7 +14,7 @@ struct RootView: View {
     var body: some View {
         ZStack {
             Group {
-                switch navigationController.visibleRootView {
+                switch navigationController.presentedRootView {
                 case .mainTabbedView:
                     RootTabbedView()
 
@@ -23,7 +23,7 @@ struct RootView: View {
                 }
             }
             // perform left/right slide transitions when moving between root views
-            .animation(.default, value: navigationController.visibleRootView)
+            .animation(.default, value: navigationController.presentedRootView)
             .transition(AnyTransition.asymmetric(insertion: .move(edge: navigationController.transitionInsertionEdge),
                                                  removal: .move(edge: navigationController.transitionRemovalEdge)))
         }
