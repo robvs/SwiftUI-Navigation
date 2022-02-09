@@ -10,7 +10,6 @@ import SwiftUI
 struct RootNavigationView: View {
 
     @EnvironmentObject var navigationController: NavigationController
-    @State private var selection: String? = nil
 
     var body: some View {
         NavigationView {
@@ -22,19 +21,21 @@ struct RootNavigationView: View {
                 firstViewNavigationButton
                 masterDetailNavigationButton
 
-                Button("Show Tabbed View") { navigationController.navigate(to: .mainTabbedView) }
+                Button("Show Last Tabbed View") { navigationController.navigate(to: .mainTabbedView) }
+                Button("Show First Tabbed View") { navigationController.navigate(to: .first) }
+                Button("Show Second Tabbed View") { navigationController.navigate(to: .second) }
             }
-            .navigationTitle("Navigation \(selection ?? "")")
+            .navigationTitle("Root Navigation View")
         }
     }
 
     var firstViewNavigationButton: some View {
         Group {
-            Button("Show First View")  { selection = "First" }
+            Button("Show First View")  { navigationController.rootNavigationSelection = .firstNavSubview }
 
             NavigationLink(destination: Text("First View"),
-                           tag: "First",
-                           selection: $selection) {
+                           tag: RootNavigationSelection.firstNavSubview,
+                           selection: $navigationController.rootNavigationSelection) {
                 EmptyView()
             }
         }
@@ -42,11 +43,11 @@ struct RootNavigationView: View {
 
     var masterDetailNavigationButton: some View {
         Group {
-            Button("Show Master/Detail View") { selection = "Second" }
+            Button("Show Master/Detail View") { navigationController.rootNavigationSelection = .secondNavSubview }
 
             NavigationLink(destination: NavigationMasterListView(),
-                           tag: "Second",
-                           selection: $selection) {
+                           tag: RootNavigationSelection.secondNavSubview,
+                           selection: $navigationController.rootNavigationSelection) {
                 EmptyView()
             }
         }

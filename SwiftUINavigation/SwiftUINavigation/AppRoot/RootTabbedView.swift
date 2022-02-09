@@ -25,21 +25,27 @@ struct RootTabbedView: View {
             // add bottom padding so that the bottom of the view will scroll above the tab view
             .padding(.bottom, AppDimension.tabViewHeight)
 
-            VStack {
-                Spacer()
-                MainTabView(selectedTabItem: $navigationController.selectedTabItem)
+            if navigationController.isTabViewPresented {
+                VStack {
+                    Spacer()
+                    MainTabView(selectedTabItem: $navigationController.selectedTabItem)
+                }
             }
         }
     }
 
     private var firstTabView: some View {
-        VStack {
+        VStack(spacing: 8.0) {
             Text("This is tab \(navigationController.selectedTabItem.label)")
                 .fontWeight(.bold)
                 .padding()
 
             Button("Show Root Nav View") {
                 navigationController.navigate(to: .baseNavigationView)
+            }
+
+            Button("Show First Nav View") {
+                navigationController.navigate(to: .firstNavSubview)
             }
         }
     }
