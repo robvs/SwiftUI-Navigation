@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that demonstrates how to use `NavigationController` to perform deep link navigation.
 struct DeepLinksView: View {
 
     @EnvironmentObject var navigationController: NavigationController

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// The root view for performing standard `NavigationView` style navigation.
 struct RootNavigationView: View {
 
     @EnvironmentObject var navigationController: NavigationController

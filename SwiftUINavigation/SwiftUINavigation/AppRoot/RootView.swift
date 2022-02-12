@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// The base content view for the application. It uses the `presentedRootView` value in the navigation
+/// controller to determine which root-level view to display.
 struct RootView: View {
 
     @StateObject var navigationController = NavigationController(initialRootView: .baseNavigationView)

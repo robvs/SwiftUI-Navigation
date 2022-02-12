@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// The root view for performing tab bar style navigation. Note that this uses a custom tab view
+/// because because SwiftUI's `TabView` is too inflexible (i.e. it doesn't allow hiding the tab bar).
 struct RootTabbedView: View {
 
     @EnvironmentObject var navigationController: NavigationController
